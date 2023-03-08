@@ -1,12 +1,11 @@
 import { Router, Response, Request } from "express";
+import { getItem, postItem } from "../controllers/item";
 
 const router = Router()
 
-/**
- * http://localhost:3002/items [GET]
- */
-router.get('/', (req:Request, res:Response) => {
-  res.send({ data: 'Aqui_van_los_modelos' })
-})
+
+router.get('/', getItem);
+router.post('/', postItem);
+router.post()
 
 export { router }
